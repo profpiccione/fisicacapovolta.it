@@ -1,0 +1,117 @@
+.box {
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.boxTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.box :global(p:last-child) {
+  margin-bottom: 0;
+}
+
+/* Per iniziare / Per riassumere — arancione, come nel libro originale */
+.perIniziare,
+.perRiassumere {
+  background-color: #ffe8cc;
+  border-color: #ffcc99;
+}
+[data-theme='dark'] .perIniziare,
+[data-theme='dark'] .perRiassumere {
+  background-color: #4a3620;
+  border-color: #a06a2e;
+}
+.perIniziare .boxTitle,
+.perRiassumere .boxTitle {
+  color: #b25b00;
+}
+[data-theme='dark'] .perIniziare .boxTitle,
+[data-theme='dark'] .perRiassumere .boxTitle {
+  color: #ffb066;
+}
+
+/* Esempio — grigio */
+.esempio {
+  background-color: #f0f0f0;
+  border-color: #cccccc;
+}
+[data-theme='dark'] .esempio {
+  background-color: #3a3a3a;
+  border-color: #5a5a5a;
+}
+.esempio .boxTitle {
+  color: #555555;
+}
+[data-theme='dark'] .esempio .boxTitle {
+  color: #cccccc;
+}
+
+/* F.A.Q. — giallo chiaro */
+.faq {
+  background-color: #fffbe0;
+  border-color: #e6d98c;
+}
+[data-theme='dark'] .faq {
+  background-color: #4a4520;
+  border-color: #8c832e;
+}
+.faq .boxTitle {
+  color: #8a7300;
+}
+[data-theme='dark'] .faq .boxTitle {
+  color: #e6d24d;
+}
+
+/* Esercizi — azzurro chiaro */
+.esercizi {
+  background-color: #eef0ff;
+  border-color: #c2c9ff;
+}
+[data-theme='dark'] .esercizi {
+  background-color: #262a4a;
+  border-color: #4d55a0;
+}
+.esercizi .boxTitle {
+  color: #3a3fb0;
+}
+[data-theme='dark'] .esercizi .boxTitle {
+  color: #a8adff;
+}
+
+/* Il modello di riferimento — riquadro bianco con bordo netto */
+.modelloRiferimento {
+  background-color: var(--ifm-background-surface-color);
+  border: 2px solid var(--ifm-color-emphasis-300);
+}
+.modelloRiferimento .boxTitle {
+  color: var(--ifm-color-emphasis-800);
+  text-decoration: underline;
+  justify-content: flex-end;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
